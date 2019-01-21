@@ -1,0 +1,3 @@
+[submodule "themes/a-rsnippet"]
+	path = themes/a-rsnippet
+	url = git@github.com:huyingjie/hexo-theme-A-RSnippet.git
