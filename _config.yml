@@ -2,88 +2,26 @@
 # Site Information Settings
 # ---------------------------------------------------------------
 # title can include HTML code.
-title: A-RSnippet <a class="github-button" href="https://github.com/huyingjie/hexo-theme-A-RSnippet" data-icon="octicon-star" data-show-count="true" aria-label="Star huyingjie/hexo-theme-A-RSnippet on GitHub">Star</a>
-description: A website for A-RSnippet Hexo Theme
-author: Yingjie Hu
-language: en
+title: SwiftGG  # <a id="logo" href="#" target="_blank"><img src="/img/logo_swiftgg.png"></a>
+description: Swift 教程 - Swift 语言学习 - Swift code - SwiftGG 翻译组 - 高质量的 Swift 译文网站
+author: SwiftGG
+language: zh
 timezone:
 
 # custom Site settings
-SEOTitle: An A-RSnippet Hexo Theme
-keyword: "hexo, hexo theme, A-RSnippet, responsive, bootstrap" # seo key words
+SEOTitle: SwiftGG
+keyword: "swift, swiftGG, SwiftGG, Swift, iOS" # seo key words
 
-favicon: # your favicon png
+favicon: /img/logo_swiftgg.png # your favicon png
 # custom end
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://swift.gg
 root: /
 # :year/:month/:day/:title/
 permalink: :title/
 permalink_defaults:
-
-footer:
-# Specify the date when the site was setup.
-# If not defined, current year will be used.
-  since: 2015
-
-  # Icon between year and copyright info.
-  # From: http://fontawesome.io/
-  # Example: user
-  icon: heart
-
-  # If not defined, will be used `author` from Hexo main config.
-  copyright:
-  # -------------------------------------------------------------
-  # Hexo link (Powered by Hexo).
-  powered: true
-  # Theme & scheme info link (Theme - A-RSnippet).
-  theme: true
-
-  # -------------------------------------------------------------
-  # Any custom text can be defined here.
-  # custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
-
-# ---------------------------------------------------------------
-# Menu Settings
-# ---------------------------------------------------------------
-menu:
-  home: /
-  Tutorial: /tutorial/
-  LeetCode-category: /leetcode-category/
-  LeetCode-tag: /leetcode-tag/
-  archives: /archives/
-  tags: /tags/
-  projects: /portfolio-slim/
-  support: /support/
-  RSS: /atom.xml
-
-# ---------------------------------------------------------------
-# SNS settings
-# ---------------------------------------------------------------
-# Set rss to false to disable feed link.
-# Leave url as empty to use site's feed link.
-# Set url to specific value if you have burned your feed already.
-rss:
-  enable: true
-  url:                    # if empty, use default url, root_path/atom.xml
-
-# email: xxx@gmail.com
-# weibo_username:
-# zhihu_username:
-github_username: huyingjie
-twitter_username: yingjieYJH
-# facebook_username:
-# linkedin_username:
-
-# ---------------------------------------------------------------
-# Sidebar settings
-# ---------------------------------------------------------------
-sidebar: true
-sidebar-about-description: data scientist
-sidebar-avatar-url: https://avatars3.githubusercontent.com/u/4664280?s=460&v=4
-sidebar-description-after-icons: <a href="https://www.patreon.com/arsnippet" target="_blank"><img src="/img/patreon.png" alt="support my work at patron"></a><br><br><a href="https://arsnippet.freeflarum.com/" target="_blank"><img src="/img/forum.jpg" alt="support my work at patron"></a><br><br><a href="https://discord.gg/CB6CPzq" target="_blank"><img src="/img/discord.png" alt="Join the Discord"></a>
 
 # ---------------------------------------------------------------
 # Hexo official settings
@@ -132,7 +70,7 @@ per_page: 8
 pagination_dir: page
 
 ## Themes: https://hexo.io/themes/
-theme: a-rsnippet
+theme: amber
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -141,127 +79,95 @@ deploy:
   repo:
   branch:
 
+# Basic config
+## Menu
+menu:
+  Home: /
+  Archives: /archives
+  Tags: /related?tag=all
+  Categories: /related?category=all
+  # Custom Menu
+  # example:
+  #   [O]  About: /about/index  (directory based)
+  #   [O]  About: /about        (single .md file)
 
-# ---------------------------------------------------------------
-# Layout settings: homepage
-# ---------------------------------------------------------------
-# If enable, update date will show on the cover photo.
-index_update_date_enable: false
+# Slider
+slider: 10 # unit: seconds. `true` or number for enable and `false` for disable
 
-# ---------------------------------------------------------------
-# Layout settings: post layout & leetcode layout
-# ---------------------------------------------------------------
-# If enable, update date will show in the header.
-post_update_date_enable: true
+# Topic
+topic:  # tag array for enable and `false` for disable
+# example:
+#   [0] - essay
+#       - note
+#   [x] - false
+#   [x] true
 
-# Can contain HTML
-# Appear at the begginning of the post
-content_before_post: <div class="subscribe"><a href="http://eepurl.com/dh6iCD" target="_blank">Get Updated for Each Release!</a></div><p>
-# Can contain HTML
-# Appear at the end of the post
-content_after_post: <a href="https://www.patreon.com/arsnippet" target="_blank"><img src="/img/patreon.png" alt="support my work at patron"></a> <a href="https://arsnippet.freeflarum.com/" target="_blank"><img src="/img/forum.jpg" alt="support my work at patron"></a> <a href="https://discord.gg/CB6CPzq" target="_blank"><img src="/img/discord.png" alt="Join the Discord"></a>
+## RSS Feed
+## docs: https://github.com/hexojs/hexo-generator-feed
+rss:
+  enable: false
+  # path: # path to atom.xml or rss.xml
 
-# default cover image
-# example: animated gif as header
-cover_default_img: /img/sky-clouds-moon-horizon.jpg?h=350&auto=compress&cs=tinysrgb
+## Social links
+social:
+  # facebook: ...
+  # github: ...
+  # twitter: ...
+  # weibo: ...
+  websites:
+    # - text: ...
+    #   link: ...
 
+## Sidebar
+sidebar:
+  leaf: To descript your blog. *Markdown* supported.
+  github: Mitscherlich
 
-# Table Of Contents in the Sidebar
-toc:
+## comments
+### gitalk docs: https://github.com/gitalk/gitalk
+### gitment docs: https://github.com/imsun/gitment
+### valine docs: https://github.com/xCss/Valine
+comments:
   enable: true
-  # Automatically add list number to toc.
-  number: true
+  engine: gitalk  # NOTE: you can ONLY use ONE comment system!
+  gitalk:
+    # required: github application client id
+    clientID: process.env.clientId
+    # required: github application client secret
+    clientSecret: process.env.clientSecret
+    repo: process.env.repo    # required: github repo
+    owner: process.env.author # required: github repo owner
+    admin:
+      - process.env.author  # required: gitHub repo owner and collaborators
+                            # only these guys can initialize github issues
+  gitment:
+    repo: process.env.repo    # required: github repo
+    owner: process.env.author # required: github repo owner
+    oauth:
+      # required: github application client id
+      client_id: process.env.clientId
+      # required: github application client secret
+      client_secret: process.env.clientSecret
+  valine:
+    # required: leancloud app id
+    appId: process.env.appId
+    # required: leancloud app key
+    appKey: process.env.appKey
 
-# ---------------------------------------------------------------
-# Layout settings: page layout
-# ---------------------------------------------------------------
+## Build-in Search
+## NOTE: DONNT USE NOW!!! -- TOO BUGGY
+# search:
+#   enable: false
+#   engine: build-in  # only support build-in currently
+#   max: 5            # the number of suggestions
 
-# ---------------------------------------------------------------
-# Layout settings: arhive layout
-# ---------------------------------------------------------------
-# archive page title
-archive:
-    title: Archives
-    subtitle: Cool?
+## powered by information
+powered_by:
+  author: Mitscherlich
+  link: https://github.com/Mitscherlich
 
-# ---------------------------------------------------------------
-# Layout settings: poem layout
-# ---------------------------------------------------------------
-
-# ---------------------------------------------------------------
-# Layout settings: portfolio-slim layout
-# ---------------------------------------------------------------
-
-# ---------------------------------------------------------------
-# Layout settings: archive layout
-# ---------------------------------------------------------------
-
-# ---------------------------------------------------------------
-# Layout settings: 404 layout
-# ---------------------------------------------------------------
-
-# ---------------------------------------------------------------
-# Layout settings: list-category-leetcode layout
-# ---------------------------------------------------------------
-
-# ---------------------------------------------------------------
-# Layout settings: list-tag-leetcode layout
-# ---------------------------------------------------------------
-
-# ---------------------------------------------------------------
-# Layout settings: 404 layout
-# ---------------------------------------------------------------
-
-#################################################################
-# ---------------------------------------------------------------
-# Third Party Services Settings
-# ---------------------------------------------------------------
-#################################################################
-# MathJax Support
-mathjax:
-  enable: true
-  #per_page: true
-  cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-
-# ---------------------------------------------------------------
-# Comment settings
-# ---------------------------------------------------------------
-# Disqus settings
-disqus_shortname: hexo-a-rsnippet
-
-# Use livere
-# use_livere: false
-# livere_uid: MTAyMC8zMz
-
-# ---------------------------------------------------------------
-# Analytics settings
-# ---------------------------------------------------------------
-# Baidu Analytics
-baidu_analytics:
-# Google Analytics
-google_analytics: UA-38355881-1            # Format: UA-xxxxxx-xx
-# Google Webmaster tools verification setting
-# See: https://www.google.com/webmasters/
-# Click "Alternative methods" => Select "HTML tag" => copy the string in the "content" property of "meta" element
-# <meta name="google-site-verification" content="xxxxxx" />
-# Input xxxxxx below
-google_site_verification: wtCjI-zcpr2FYwWS3sI4OWzMK9e7VomDrZyxpVUUIng
-
-bing_site_verification:
-yandex_site_verification:
-
-# ---------------------------------------------------------------
-# Share
-# ---------------------------------------------------------------
-add_this_id: ra-5272bc2a7b3c1ddc
-# Enable/Disable Update date
-
-# ---------------------------------------------------------------
-# Search
-# ---------------------------------------------------------------
-# search api , set your custom key
-# It is not working now. It is a feature in the future.
-# swiftype_key:
-
-# Theme version
-version: 0.1.0
+# External
+## Google Analytics
+google_analytics:
+  enable: false
+  track_id:  # replace to your track_id. It starts with 'UA-'.
