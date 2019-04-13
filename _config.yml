@@ -2,10 +2,11 @@
 # Site Information Settings
 # ---------------------------------------------------------------
 # title can include HTML code.
-title: SwiftGG  # <a id="logo" href="#" target="_blank"><img src="/img/logo_swiftgg.png"></a>
-description: Swift 教程 - Swift 语言学习 - Swift code - SwiftGG 翻译组 - 高质量的 Swift 译文网站
-author: SwiftGG
-language: zh
+title: SwiftGG # 网站标题
+subtitle: 走心的 Swift 翻译组 # 网站副标题
+description: SwiftGG翻译组，做高质量的Swift文章翻译，为你带来优质的国外Swift语言教程 # 网站描述，给搜索引擎用的，在生成html中的head->meta中可看到
+author: SwiftGG # 网站作者
+language: zh-CN # 语言
 timezone:
 
 # custom Site settings
@@ -20,7 +21,7 @@ favicon: /img/logo_swiftgg.png # your favicon png
 url: https://swift.gg
 root: /
 # :year/:month/:day/:title/
-permalink: :title/
+permalink: :year/:month/:day/:title/ # 文章的永久链接格式
 permalink_defaults:
 
 # ---------------------------------------------------------------
@@ -37,18 +38,19 @@ i18n_dir: :lang
 skip_render:
 
 # Writing: Defined by Hexo
-new_post_name: :title.md                  # File name of new posts
-default_layout: post
-titlecase: false                          # Transform title into titlecase
-external_link: true                       # Open external links in new tab
+new_post_name: :title.md # File name of new posts
+default_layout: post # 默认layout方式
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+auto_spacing: false # 在中文和英文之间加入空格
 filename_case: 0
-render_drafts: false
-post_asset_folder: true
+render_drafts: false # 显示草稿
+post_asset_folder: false
 relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace:
 
@@ -61,13 +63,18 @@ tag_map:
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: MMM D, YYYY
+date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 8
+per_page: 20
 pagination_dir: page
+
+archive_generator:
+  per_page: 20
+  yearly: true
+  montyly: true
 
 ## Themes: https://hexo.io/themes/
 theme: amber
@@ -85,7 +92,12 @@ menu:
   Home: /
   Archives: /archives
   Tags: /related?tag=all
-  Categories: /related?category=all
+  Docs: /docs/index
+  Events: /events/index
+  Podcast: /podcast/index
+  Code T: /codeT/index
+  Media: /media/index
+  About: /abount/index
   # Custom Menu
   # example:
   #   [O]  About: /about/index  (directory based)
@@ -95,7 +107,7 @@ menu:
 slider: 10 # unit: seconds. `true` or number for enable and `false` for disable
 
 # Topic
-topic:  # tag array for enable and `false` for disable
+topic: false # tag array for enable and `false` for disable
 # example:
 #   [0] - essay
 #       - note
